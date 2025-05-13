@@ -92,7 +92,7 @@ function App() {
         {recipes.length > 0 ? (
           recipes.map((recipe) => (
             // 使用 recipe.id (如果存在) 或 recipe.titleTxt (如果存在) 作为key，最后回退到 Date.now() 随机数
-            <RecipeCard key={recipe.id || recipe.titleTxt || Date.now() * Math.random()} recipe={recipe} />
+            <RecipeCard key={recipe.id} recipe={recipe} />
           ))
         ) : (
           <p>No recipes to display. Add some using the form above or check `public/recipes.json`!</p>
